@@ -65,14 +65,14 @@ If you aren't comfortable with editing shell scripts or debugging build issues, 
 
 ### The very advanced answer
 
-If you are comfortable with debugging and shell scripts and you figure out how to fix the build issue in a clean way, please submit a pull request. :)
+If you are comfortable with debugging and shell scripts and you figure out how to fix the build issue in a clean way, please submit a pull request. :smiley:
 
 #### Fixing a failing build dependency
 **The below is only for developers who know about build systems. If you start playing around with this stuff, we hope it's because you know what you're doing and are going to contribute your fixes.**
 
 You can hop into `dependencies/build/<platform>/<package>/` to find the out of tree build directory. From there you can run `make` and so on. Running `make install` will install into `dependencies/out/<platform>/`.
 
-If you fix it by editing the shell script and want to re-run the build completely cleanly, wiping out builds for all platforms, you can go into `dependencies/` and run `./build-<package>.sh -C` which will **completely clean out all the build and checked out code for that package**. You have been warned. :) Then you can run `./build-<package>.sh -r <short platforms>` to try the build again.
+If you fix it by editing the shell script and want to re-run the build completely cleanly, wiping out builds for all platforms, you can go into `dependencies/` and run `./build-<package>.sh -C` which will **completely clean out all the build and checked out code for that package**. You have been warned. :neutral_face: Then you can run `./build-<package>.sh -r <short platforms>` to try the build again.
 
 If you fix it by editing the build system of the package (i.e. the checked out code in `dependencies/package/`) then you need to be more careful. If doing that, you can go into `dependencies/build/<platform>/<package>/` and run `make` and so on in there as stated above.
 
