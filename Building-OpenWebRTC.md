@@ -17,37 +17,87 @@ We currently target the iOS 8 SDK.
 The NDK version r9d needs to be installed and the ndk-build program must be in the path. The latest SDK shall also be installed and the adb program needs to be available in your shell environment's PATH.
 
 # Obtaining the code
+
 **Fork the OpenWebRTC git** and then clone it.
 ```
 git clone https://github.com/<YourName>/openwebrtc.git --recursive
 cd openwebrtc
 ```
-# Environment configuration
-Before we can start building OpenWebRTC we need to build some tools. This is done in the bootstrap directory:
+
+# Bootstrapping the build environment
+
+Before we can start building OpenWebRTC we need to build some tools. This takes about 20-30 minutes on a dual core i5 2.4GHz running OS X 10.9.
+
+## Available targets
+
+Host Platform | Target Name
+--- | :---:
+Mac OS X 10.9 | osx
+Ubuntu Linux 14.04 LTS | linux
+
+## Bootstrapping
+This is done in the bootstrap directory:
 ```
 cd scripts/bootstrap
 ./bootstrap.sh -r osx
 cd -
 ```
-If you are using a Linux computer instead of a Mac exchange the "osx" argument above to "linux". Note: we currently only run and test on **Ubuntu 14.04 LTS** but it may work on other distributions.
+If you are using a Linux computer instead of a Mac exchange the `osx` argument above to `linux`. Note: we currently only run and test on **Ubuntu 14.04 LTS** but it may work on other distributions.
 
 # Build the dependencies
-The dependencies used by OpenWebRTC framework are built separately using the following commands:
+The dependencies used by OpenWebRTC framework are built separately. This takes about 50-60 minutes on a dual core i5 2.4GHz running OS X 10.9 when building just for the `osx` target. It will take longer if using more than one target and the amount of time may vary across targets.
+
+## Available targets
+
+Target Platform | Target Name
+--- | :---:
+Mac OS X 10.9 | osx
+iOS 8.0 | ios
+iOS 8.0 Simulator | ios-simulator
+Ubuntu Linux 14.04 LTS | linux
+Android | android
+
+If building for multiple platforms as in the example below, it will take much longer. The `android` and `linux` targets build some different packages to the others that take quite a bit longer to build.
+
+## Build the dependencies
+
+Use the following commands:
 ```
 cd scripts/dependencies
-./build-all.sh -r osx ios android ios-simulator
+./build-all.sh -r osx
 ./deploy_deps.sh
 cd -
 ```
-The available target platforms when building on Mac can be seen above, if you are building on Linux the available target platforms are "linux" and "android".
+
+[Optional] If you want to build for multiple targets simultaneously, it will take much longer but you can list them one after the other:
+```
+cd scripts/dependencies
+./build-all.sh -r osx ios ios-simulator android
+./deploy_deps.sh
+cd -
+```
 
 # Build OpenWebRTC
 
-The OpenWebRTC framework is built using one command:
+## Available targets
+
+Target Platform | Target Name
+--- | :---:
+Mac OS X 10.9 | osx
+iOS 8.0 | ios
+iOS 8.0 Simulator | ios-simulator
+Ubuntu Linux 14.04 LTS | linux
+Android | android
+
+The OpenWebRTC framework is built using one command from the root of the openwebrtc repository:
 ```
-./build.sh -r osx ios android ios-simulator
+./build.sh -r osx
 ```
-The available target platforms when building on Mac can be seen above, if you are building on Linux the available target platforms are "linux" and "android".
+
+[Optional] Again, you can build for multiple targets simultaneously by listing them one after the other:
+```
+./build-all.sh -r osx ios ios-simulator android
+```
 
 Now the OpenWebRTC framework is compiled and ready to be incorporated into your application.
 
