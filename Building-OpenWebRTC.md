@@ -61,7 +61,7 @@ If part of the bootstrap or dependencies fails to build, it is most likely becau
 
 ### The simple answer
 
-Only if you know what you're doing. If you aren't comfortable with editing shell scripts or debugging build issues, it is better if you file a report with some information about your system and the build failure.
+If you aren't comfortable with editing shell scripts or debugging build issues, it is better if you file a report with some information about your system and the build failure.
 
 ### The very advanced answer
 
