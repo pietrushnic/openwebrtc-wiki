@@ -20,7 +20,7 @@ The NDK version r9d needs to be installed and the ndk-build program must be in t
 
 **Fork the OpenWebRTC git** and then clone it.
 ```
-git clone https://github.com/<YourName>/openwebrtc.git --recursive
+git clone --recursive https://github.com/<YourName>/openwebrtc.git
 cd openwebrtc
 ```
 
