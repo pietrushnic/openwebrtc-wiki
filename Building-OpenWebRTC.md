@@ -96,7 +96,7 @@ The OpenWebRTC framework is built using one command from the root of the openweb
 
 [Optional] Again, you can build for multiple targets simultaneously by listing them one after the other:
 ```
-./build-all.sh -r osx ios ios-simulator android
+./build.sh -r osx ios ios-simulator android
 ```
 
 Now the OpenWebRTC framework is compiled and ready to be incorporated into your application.
