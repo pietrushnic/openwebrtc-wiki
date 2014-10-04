@@ -3,18 +3,20 @@
 ## Host (Build) Platforms
 
 ### Mac OS X
+We support the current version of **Mac OS X 10.9 Mavericks** however, it has also been tested and works fine on 10.8 Mountain Lion and 10.10 Yosemite previews.
+
 To build on Mac OS X you need to install Xcode and the command line tools. We have used the framework with a few different versions of OS X but we try to support whatever the current stable releases are from Apple.
 
 ### Linux
-We currently only support **Ubuntu 14.04 LTS**. You're welcome to try building on other distributions but we probably won't be able to help with build issues at the moment.
+We currently only support **Ubuntu 14.04 LTS** and only **64-bit**. You're welcome to try building on other distributions but we probably won't be able to help with build issues at the moment.
 
 ## Target Platforms
 
 ### iOS
-We currently target the iOS 8 SDK.
+We currently target the **iOS 8.0** SDK.
 
 ### Android
-The NDK version r9d needs to be installed and the ndk-build program must be in the path. The latest SDK shall also be installed and the adb program needs to be available in your shell environment's PATH.
+The NDK version **r9d** needs to be installed and the ndk-build program must be in the path. The latest SDK shall also be installed and the adb program needs to be available in your shell environment's PATH.
 
 # Obtaining the code
 
@@ -33,7 +35,7 @@ Before we can start building OpenWebRTC we need to build some tools. This takes 
 Host Platform | Target Name
 --- | :---:
 Mac OS X 10.9 | osx
-Ubuntu Linux 14.04 LTS | linux
+Ubuntu Linux 14.04 LTS 64-bit | linux
 
 ## Bootstrapping
 This is done in the bootstrap directory:
@@ -54,7 +56,7 @@ Target Platform | Target Name
 Mac OS X 10.9 | osx
 iOS 8.0 | ios
 iOS 8.0 Simulator | ios-simulator
-Ubuntu Linux 14.04 LTS | linux
+Ubuntu Linux 14.04 LTS 64-bit | linux
 Android | android
 
 If building for multiple platforms as in the example below, it will take much longer. The `android` and `linux` targets build some different packages to the others that take quite a bit longer to build.
@@ -86,7 +88,7 @@ Target Platform | Target Name
 Mac OS X 10.9 | osx
 iOS 8.0 | ios
 iOS 8.0 Simulator | ios-simulator
-Ubuntu Linux 14.04 LTS | linux
+Ubuntu Linux 14.04 LTS 64-bit | linux
 Android | android
 
 The OpenWebRTC framework is built using one command from the root of the openwebrtc repository:
