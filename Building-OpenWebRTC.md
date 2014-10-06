@@ -47,7 +47,7 @@ cd -
 If you are using a Linux computer instead of a Mac exchange the `osx` argument above to `linux`. Note: we currently only run and test on **Ubuntu 14.04 LTS** but it may work on other distributions.
 
 # Build the dependencies
-The dependencies used by OpenWebRTC framework are built separately. This takes about 50-60 minutes on a dual core i5 2.4GHz running OS X 10.9 when building just for the `osx` target. It will take longer if using more than one target and the amount of time may vary across targets.
+The dependencies used by OpenWebRTC framework are built separately. The amount of time may vary across targets. It takes about 50-60 minutes on a dual core i5 2.4GHz running OS X 10.9 when building just for the `osx` target. If building for multiple platforms as in the example below, it will take much longer. The `android` and `linux` targets build some different packages to the others that take quite a bit longer to build.
 
 ## Available targets
 
@@ -58,8 +58,6 @@ iOS 8.0 | ios
 iOS 8.0 Simulator | ios-simulator
 Ubuntu Linux 14.04 LTS 64-bit | linux
 Android | android
-
-If building for multiple platforms as in the example below, it will take much longer. The `android` and `linux` targets build some different packages to the others that take quite a bit longer to build.
 
 ## Build the dependencies
 
