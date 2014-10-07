@@ -6,7 +6,7 @@ We are working hard on interoperability. We believe interoperability is one of t
 
 One of the first things to test is whether you can get a video stream from your camera. You can do this with a simple [getUserMedia test app](http://googlechrome.github.io/webrtc/samples/web/content/getusermedia/).
 
-# Point-to-point Audio/Video Conversation Test
+# Point-to-point Audio/Video Test
 
 Our simple peer-2-peer demo app is live at [http://demo.openwebrtc.io](http://demo.openwebrtc.io). The app runs on node.js and the source code is available [here](https://github.com/EricssonResearch/openwebrtc-examples).
 
