@@ -8,4 +8,4 @@ One of the first things to test is whether you can get a video stream from your 
 
 # Point-to-point Audio/Video Conversation Test
 
-Link to demo app coming soon.
+Our simple peer-2-peer demo app is live at [http://demo.openwebrtc.io](http://demo.openwebrtc.io). The app runs on node.js and the source code is available [here](https://github.com/EricssonResearch/openwebrtc-examples).
