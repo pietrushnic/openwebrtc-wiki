@@ -18,7 +18,7 @@ We currently target the **iOS 8.0** SDK.
 ### Android
 The NDK version **r9d** needs to be installed and the ndk-build program must be in the path. The latest SDK shall also be installed and the adb program needs to be available in your shell environment's PATH.
 
-# Obtaining the code
+# 1. Obtaining the code
 
 **Fork the OpenWebRTC git** and then clone it.
 ```
@@ -26,7 +26,7 @@ git clone --recursive https://github.com/<YourName>/openwebrtc.git
 cd openwebrtc
 ```
 
-# Bootstrapping the build environment
+# 2. Bootstrapping the build environment
 
 Before we can start building OpenWebRTC we need to build some tools. This takes about 20-30 minutes on a dual core i5 2.4GHz running OS X 10.9.
 
@@ -46,7 +46,7 @@ cd -
 ```
 If you are using a Linux computer instead of a Mac exchange the `osx` argument above to `linux`. Note: we currently only run and test on **Ubuntu 14.04 LTS** but it may work on other distributions.
 
-# Build the dependencies
+# 3. Build the dependencies
 The dependencies used by OpenWebRTC framework are built separately. The amount of time may vary across targets. It takes about 50-60 minutes on a dual core i5 2.4GHz running OS X 10.9 when building just for the `osx` target. If building for multiple platforms as in the example below, it will take much longer. The `android` and `linux` targets build some different packages to the others that take quite a bit longer to build.
 
 ## Available targets
@@ -69,7 +69,7 @@ cd scripts/dependencies
 cd -
 ```
 
-[Optional] If you want to build for multiple targets simultaneously, it will take much longer but you can list them one after the other:
+**[Optional]** If you want to build for multiple targets simultaneously, it will take much longer but you can list them one after the other:
 ```
 cd scripts/dependencies
 ./build-all.sh -r osx ios ios-simulator android
@@ -77,7 +77,7 @@ cd scripts/dependencies
 cd -
 ```
 
-# Build OpenWebRTC
+# 4. Build OpenWebRTC
 
 ## Available targets
 
@@ -94,7 +94,7 @@ The OpenWebRTC framework is built using one command from the root of the openweb
 ./build.sh -r osx
 ```
 
-[Optional] Again, you can build for multiple targets simultaneously by listing them one after the other:
+**[Optional]** Again, you can build for multiple targets simultaneously by listing them one after the other:
 ```
 ./build.sh -r osx ios ios-simulator android
 ```
