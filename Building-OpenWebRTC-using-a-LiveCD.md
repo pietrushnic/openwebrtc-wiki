@@ -23,10 +23,10 @@ this build is several GB however (~5.5GB), and takes a good deal of time to comp
 
 ## Pre-install Procedure
 
-  * download a Trusty Tahr **64-bit kubuntu 14.04 LTS Desktop LiveCD ISO*** image from [kubuntu](http://www.kubuntu.org/getkubuntu)
-    ** ASSERT: **64-bit** - - **14.04** - - **Desktop ISO** - - or better yet, use this [bittorrent link](http://cdimage.ubuntu.com/kubuntu/releases/trusty/release/kubuntu-14.04.1-desktop-amd64.iso.torrent)
+  * download a Trusty Tahr **64-bit kubuntu 14.04 LTS Desktop LiveCD ISO*** image from [kubuntu](http://www.kubuntu.org/getkubuntu)  
+    ** ASSERT: **64-bit** - - **14.04** - - **Desktop ISO** ** or better yet, use this [bittorrent link](http://cdimage.ubuntu.com/kubuntu/releases/trusty/release/kubuntu-14.04.1-desktop-amd64.iso.torrent)
 
-  * burn to a CD and boot or frugal boot from HD or USB with [unetbootin](http://unetbootin.sourceforge.net/) (instructions omitted for brevity)
+  * burn to a DVD and boot or frugal boot from HD or USB with [unetbootin](http://unetbootin.sourceforge.net/) (instructions omitted for brevity)
 
   * choose the "Try Kubuntu" option from the boot menu to boot into the liveCD environment
 
