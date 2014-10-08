@@ -1,14 +1,15 @@
 ### HowTo build OpenWebRTC using a LiveCD
 
-the OpenWebRTC project currently only strictly supports ubuntu 14.04 - however, it is not necessary to have a full install of ubuntu on your machine in order to build OpenWebRTC - this may be accomplished using a liveCD
+the OpenWebRTC project currently only strictly supports **64-bit Ubuntu 14.04** - however, it is not necessary to have a full install of ubuntu on your machine in order to build OpenWebRTC - this may be accomplished using a liveCD
 
 why would one want to do this?
   * if one does not already have a linux or OSX build environment (e.g. windows)
   * if one has a linux build environment but it is not ubuntu
-  * if one would like to build the entire project on a keychain to show grandma  
+  * if one would like to build the entire project on a keychain to show grandma
 
 and
   * one is targeting only linux and/or android
+  * you must use a 64-bit PC
 
 ## Building OpenWebRTC using a Kubuntu LiveCD
 
@@ -22,7 +23,8 @@ this build is several GB however (~5.5GB), and takes a good deal of time to comp
 
 ## Pre-install Procedure
 
-  * download a kubuntu 14.04 LTS liveCD image from [kubuntu](http://www.kubuntu.org/getkubuntu)
+  * download a Trusty Tahr **64-bit kubuntu 14.04 LTS Desktop LiveCD ISO*** image from [kubuntu](http://www.kubuntu.org/getkubuntu)
+    ** ASSERT: **64-bit** - - **14.04** - - **Desktop ISO** - - or better yet, use this [bittorrent link](http://cdimage.ubuntu.com/kubuntu/releases/trusty/release/kubuntu-14.04.1-desktop-amd64.iso.torrent)
 
   * burn to a CD and boot or frugal boot from HD or USB with [unetbootin](http://unetbootin.sourceforge.net/) (instructions omitted for brevity)
 
