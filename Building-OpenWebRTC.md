@@ -10,6 +10,10 @@ To build on Mac OS X you need to install Xcode and the command line tools. We ha
 ### Linux
 We currently only support **Ubuntu 14.04 LTS** and only **64-bit**. You're welcome to try building on other distributions but we probably won't be able to help with build issues at the moment.
 
+### Windows and Other Linux
+If one does not have a **64-bit Ubuntu 14.04** build environment, this may be accomplished using a liveCD. As an alternative to attempting the build on an unsupported platform; this will ensure that the build environment is properly supported, should there be any problems.
+See [[Building OpenWebRTC using a LiveCD|Building-OpenWebRTC-using-a-LiveCD]]
+
 ## Target Platforms
 
 ### iOS
