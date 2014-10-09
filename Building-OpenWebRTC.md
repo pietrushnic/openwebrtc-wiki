@@ -7,6 +7,8 @@ We support the current version of **Mac OS X 10.9 Mavericks** however, it has al
 
 To build on Mac OS X you need to install Xcode and the command line tools. We have used the framework with a few different versions of OS X but we try to support whatever the current stable releases are from Apple.
 
+git must be updated to the latest version (or you have problems building dependencies). See how to update git : http://coolestguidesontheplanet.com/install-update-latest-version-git-mac-osx-10-9-mavericks/
+
 ### Linux
 We currently only support **Ubuntu 14.04 LTS** and only **64-bit**. You're welcome to try building on other distributions but we probably won't be able to help with build issues at the moment.
 
