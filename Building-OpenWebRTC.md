@@ -107,6 +107,29 @@ The OpenWebRTC framework is built using one command from the root of the openweb
 
 Now the OpenWebRTC framework is compiled and ready to be incorporated into your application.
 
+# Update OpenWebRTC
+
+In your `openwebrtc` clone:
+```
+git checkout master
+git pull --rebase https://github.com/EricssonResearch/openwebrtc.git master
+git submodule update
+```
+
+Then you may need to update dependencies...
+```
+cd scripts/dependencies
+rm -rf openwebrtc-deps-* ../../openwebrtc-deps-*
+./build-all.sh -Cbr <platforms>   # replace <platforms> as required
+./deploy_deps.sh
+cd -
+```
+
+And then rebuild openwebrtc...
+```
+./build.sh -Cbr <platforms>   # replace <platforms> as required
+```
+
 # Troubleshooting
 
 ## Bootstrap or dependencies fail to build
