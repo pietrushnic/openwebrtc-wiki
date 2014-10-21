@@ -29,13 +29,13 @@ document.head.appendChild(script);
 
 ## Step 2 - Running the daemon
 
-OpenWebRTC browser extensions communicate with the *daemon* via its local web server. Before any page load, extensions fetch JavaScript from the daemon containing WebRTC functionality and inject it in to the current context. The daemon runs in a separate process in the backgound.
+OpenWebRTC browser extensions communicate with the daemon via its local web server. Before any page load, extensions fetch JavaScript from the daemon containing WebRTC functionality and inject it in to the current context. The daemon runs in a separate process in the background.
 
 ![Daemon screenshot](https://github.com/EricssonResearch/openwebrtc-browser-extensions/blob/master/imgs/daemon.png)
 
 Start the daemon by running the following command from the root directory of your openwebrtc clone:
 ```
-./out/x86_64-apple-darwin/bin/daemon
+./out/x86_64-apple-darwin/bin/openwebrtc-daemon
 ```
 
 Note that you need to [[build|Building-OpenWebRTC]] OpenWebRTC first. In this example we run it on OS X, but the daemon is also available on Linux.
