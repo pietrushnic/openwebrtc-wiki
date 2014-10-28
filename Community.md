@@ -1,4 +1,3 @@
-#Community
 For support, questions and discussions:
 * Public [mailing list](https://groups.google.com/forum/#!forum/openwebrtc)
 * Twitter: [@OpenWebRTC](https://twitter.com/OpenWebRTC)
