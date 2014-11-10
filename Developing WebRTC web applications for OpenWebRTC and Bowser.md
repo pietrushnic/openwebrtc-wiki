@@ -19,6 +19,9 @@ All API's are defined in [webrtc.js](https://github.com/EricssonResearch/openweb
 ## General Notes
 
 * **WebRTC classes may not exist until after the page load has finished** - This is because the page needs to download and execute `owr.js`. You need to be aware of this if you check for webrtc support on page load.
+* **Video DOM elements will be swapped out**
+  * Don't cache the DOM elements in JavaScript
+  * Be aware that certain attributes (like `angular ng-*`) will be lost from video elements. Put them on a container `<div>`.
 
 ## Reference application
 If you get stuck we also provide a [reference WebRTC application](https://github.com/EricssonResearch/openwebrtc-examples/tree/master/web) that works in Bowser/OpenWebRTC, Chrome and Firefox.
