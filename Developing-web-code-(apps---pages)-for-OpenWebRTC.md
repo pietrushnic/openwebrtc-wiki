@@ -1,3 +1,0 @@
-The WebRTC API is not yet finalised and part of the reason for OpenWebRTC's existence is to be an interoperable implementation. As with any other web API, small differences in how the APIs work in the respective browsers can exist.
-
-This page hopes to document them to make your life easier when writing web code to work with other popular browsers and OpenWebRTC (in the form of [Bowser](https://github.com/EricssonResearch/bowser), the `openwebrtc-daemon` or, for example, an [iOS hybrid app](https://github.com/EricssonResearch/openwebrtc-examples/wiki/Developing-a-hybrid-iOS-app).)
