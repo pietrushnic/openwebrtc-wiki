@@ -2,6 +2,8 @@ The WebRTC API is not yet finalised and part of the reason for OpenWebRTC's exis
 
 This page hopes to document them to make your life easier when writing web code to work with other popular browsers and OpenWebRTC (in the form of [Bowser](https://github.com/EricssonResearch/bowser), the `openwebrtc-daemon` or, for example, an [iOS hybrid app](https://github.com/EricssonResearch/openwebrtc-examples/wiki/Developing-a-hybrid-iOS-app).)
 
+**For Bowser-specific issues, [see here](https://github.com/EricssonResearch/bowser/wiki/Developing-for-Bowser)**
+
 ## WebRTC API and prefixes
 Where needed the `webkit` prefix is used for WebRTC API's. Examples of top level WebRTC API's:
 ```
