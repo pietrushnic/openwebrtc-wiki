@@ -45,3 +45,13 @@ If building on OS X and you wish to build for iOS, also run:
 
 #### Android build
     ./cerbero-uninstalled -c config/cross-android-armv7.cbc package openwebrtc
+
+## Using the results
+
+## Updating
+
+How to check for recipe updates as well as updates in repositories for non-fixed versions and efficiently rebuild those and their dependents.
+
+## Development
+
+How to edit code and rebuild it efficiently.
