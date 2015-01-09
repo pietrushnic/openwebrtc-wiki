@@ -1,4 +1,4 @@
-# Building with Cerbero
+# Building OpenWebRTC with Cerbero
 
 ## What is cerbero?
 
