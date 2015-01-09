@@ -52,6 +52,18 @@ If building on OS X and you wish to build for iOS, also run:
 
 How to check for recipe updates as well as updates in repositories for non-fixed versions and efficiently rebuild those and their dependents.
 
+### Update cerbero and the recipes
+
+    cd ~/cerbero
+    git pull --rebase
+
+### Fetch updated source code
+    ./cerbero-uninstalled fetch
+
+### Rebuild
+
+Run the `./cerbero-uninstalled <optional config file> package openwebrtc` command from above.
+
 ## Development
 
 How to edit code and rebuild it efficiently.
