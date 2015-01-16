@@ -17,11 +17,11 @@ A build system written for GStreamer. We have made a few changes to existing rec
 
     sudo mkdir /Library/Frameworks/OpenWebRTC.framework
     sudo chown $youruser /Library/Frameworks/OpenWebRTC.framework/
-    mkdir -p /Library/Frameworks/OpenWebRTC.framework/Versions/0.1
 
 In `~/cerbero`:
 
     mkdir -p dist
+    mkdir -p /Library/Frameworks/OpenWebRTC.framework/Versions/0.1
     ln -s /Library/Frameworks/OpenWebRTC.framework/Versions/0.1 dist/darwin_x86_64
 
 ### Bootstrap
