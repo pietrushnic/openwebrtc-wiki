@@ -17,6 +17,7 @@ A build system written for GStreamer. We have made a few changes to existing rec
 
     sudo mkdir /Library/Frameworks/OpenWebRTC.framework
     sudo chown $youruser /Library/Frameworks/OpenWebRTC.framework/
+    mkdir -p /Library/Frameworks/OpenWebRTC.framework/Versions/0.1
 
 In `~/cerbero`:
 
