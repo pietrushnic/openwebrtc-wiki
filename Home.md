@@ -9,7 +9,7 @@ This page has been newly added but more content will arrive soon. Things like de
 
 Mobile apps
 * [[Building iOS apps|https://github.com/EricssonResearch/openwebrtc-examples/wiki/Developing-iOS-apps]]
-* Building Android apps (tutorial coming soon, code [[here|https://github.com/EricssonResearch/openwebrtc-examples/tree/master/android]])
+* [[Building Android apps|https://github.com/EricssonResearch/openwebrtc-examples/wiki/Developing-Android-apps]]
 
 Community
 * [[Get in touch|Community]]
