@@ -22,7 +22,7 @@ See [[Building OpenWebRTC using a LiveCD|Building-OpenWebRTC-using-a-LiveCD]]
 We currently target the **iOS 8.0** SDK.
 
 ### Android
-The NDK version **r9d** needs to be installed and the ndk-build program must be in the path. The latest SDK shall also be installed and the adb program needs to be available in your shell environment's PATH.
+The NDK version **r10** needs to be installed and the ndk-build program must be in the path. The latest SDK shall also be installed and the adb program needs to be available in your shell environment's PATH.
 
 # 1. Obtaining the code
 
