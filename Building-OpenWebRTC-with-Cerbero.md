@@ -49,6 +49,27 @@ If building on OS X and you wish to build for iOS, also run:
 
 ## Using the results
 
+### Mac OS X framework
+
+On OS X, the prefix points to /Library/Frameworks/OpenWebRTC.framework/Versions/<version> but the files written there are unfortunately not directly usable. You have to move that framework out of the way and then install the appropriate .pkg files. Then if you want to update and rebuild the framework, you need to move the installed package out of the way, or remove it, and then rebuild, move the build result out of the way and install the package. It's cumbersome but we hope it will get fixed in cerbero at some point.
+
+After building, to use the framework:
+* `mv /Library/Frameworks/OpenWebRTC.framework /Library/Frameworks/OpenWebRTC.framework.build`
+* Install the package files
+** INSERT PACKAGE FILE NAMES HERE
+* Add the OpenWebRTC.framework to your project
+
+Before updating your framework build:
+* `sudo mv /Library/Frameworks/OpenWebRTC.framework /Library/Frameworks/OpenWebRTC.framework.package`
+* `mv /Library/Frameworks/OpenWebRTC.framework.build /Library/Frameworks/OpenWebRTC.framework`
+* Run the update build, then follow the after build steps just above
+
+### iOS framework
+
+### Linux Debian packages
+
+### Android jar?
+
 ## Updating
 
 How to check for recipe updates as well as updates in repositories for non-fixed versions and efficiently rebuild those and their dependents.
