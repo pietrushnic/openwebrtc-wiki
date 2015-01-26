@@ -67,10 +67,12 @@ Android | android
 
 ## Build the dependencies
 
+**NOTE**: You **must** also build dependencies for your host system as well as your target system(s).
+
 Use the following commands:
 ```
 cd scripts/dependencies
-./build-all.sh -r osx
+./build-all.sh -Cbr osx
 ./deploy_deps.sh
 cd -
 ```
@@ -78,7 +80,7 @@ cd -
 **[Optional]** If you want to build for multiple targets simultaneously, it will take much longer but you can list them one after the other:
 ```
 cd scripts/dependencies
-./build-all.sh -r osx ios ios-simulator android
+./build-all.sh -Cbr osx ios ios-simulator android
 ./deploy_deps.sh
 cd -
 ```
@@ -97,12 +99,14 @@ Android | android
 
 The OpenWebRTC framework is built using one command from the root of the openwebrtc repository:
 ```
-./build.sh -r osx
+./build.sh -Cbr osx
 ```
+
+**NOTE**: You **must** build for your host system first and then for your target system(s).
 
 **[Optional]** Again, you can build for multiple targets simultaneously by listing them one after the other:
 ```
-./build.sh -r osx ios ios-simulator android
+./build.sh -Cbr osx ios ios-simulator android
 ```
 
 Now the OpenWebRTC framework is compiled and ready to be incorporated into your application.
