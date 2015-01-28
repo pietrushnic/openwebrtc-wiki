@@ -34,6 +34,7 @@ If building on OS X and you wish to build for iOS, also run:
     ./cerbero-uninstalled -c config/cross-ios-universal.cbc bootstrap
 
 If building on OS X and you wish to build for Android, also run:
+
     ./cerbero-uninstalled -c config/cross-android-armv7.cbc bootstrap
 
 ### Run a full build
