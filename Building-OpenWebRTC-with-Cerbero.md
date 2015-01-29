@@ -26,16 +26,20 @@ In `~/cerbero`:
 
 ### Bootstrap
 
+Bootstrapping is required for building anything with a particular config (-c argument). For example, to build using the default config:
+
     cd cerbero
     ./cerbero-uninstalled bootstrap
 
-If building on OS X and you wish to build for iOS, also run:
+If you wish to build for iOS (requires OS X to be the host), also run:
 
     ./cerbero-uninstalled -c config/cross-ios-universal.cbc bootstrap
 
-If building on OS X and you wish to build for Android, also run:
+If you wish to build for Android (works with all hosts), also run:
 
     ./cerbero-uninstalled -c config/cross-android-armv7.cbc bootstrap
+
+And so on. Note that as the name suggests, bootstrap only needs to be run once to prepare the build environment.
 
 ### Run a full build
 
