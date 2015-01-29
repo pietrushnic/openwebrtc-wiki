@@ -8,6 +8,7 @@ A build system written for GStreamer. We have made a few changes to existing rec
 
 ### Clone cerbero code and recipes
 
+Make sure your are in your **home directory** to avoid issues down the road.
     cd
     git clone https://github.com/nirbheek/cerbero.git
 
