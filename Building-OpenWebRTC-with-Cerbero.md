@@ -44,6 +44,8 @@ And so on. Note that as the name suggests, bootstrap only needs to be run once t
 
 ### Run a full build
 
+**NOTE:** You **MUST** build for your host first before cross-compiling for Android/iOS. This is because some of the build results are re-used for cross-compiling.
+
 #### Linux host build
     ./cerbero-uninstalled package openwebrtc
 
