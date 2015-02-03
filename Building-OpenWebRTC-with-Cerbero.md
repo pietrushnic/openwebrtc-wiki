@@ -17,7 +17,7 @@ Make sure you checkout the repo in your **home directory** to avoid issues down 
 #### Mac OS X host
 
     sudo mkdir /Library/Frameworks/OpenWebRTC.framework
-    sudo chown $youruser /Library/Frameworks/OpenWebRTC.framework/
+    sudo chown $UID /Library/Frameworks/OpenWebRTC.framework/
 
 In `~/cerbero`:
 
