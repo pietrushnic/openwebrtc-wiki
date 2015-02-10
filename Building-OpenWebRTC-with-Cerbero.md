@@ -67,7 +67,8 @@ On OS X, the prefix points to /Library/Frameworks/OpenWebRTC.framework/Versions/
 After building, to use the framework:
 * `mv /Library/Frameworks/OpenWebRTC.framework /Library/Frameworks/OpenWebRTC.framework.build`
 * Install the package files
-** INSERT PACKAGE FILE NAMES HERE
+** openwebrtc-0.1.0-x86_64.pkg
+** openwebrtc-devel-0.1.0-x86_64.pkg
 * Add the OpenWebRTC.framework to your project
 
 Before updating your framework build:
