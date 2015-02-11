@@ -78,7 +78,8 @@ Before updating your framework build:
 
 ### iOS framework
 * Install the following file: `openwebrtc-devel-0.1.0-ios-universal.pkg`
-* Add the OpenWebRTC.framework to your project (found in `/Library/Frameworks/OpenWebRTC.framework`)
+* Add the OpenWebRTC.framework to your project (found in `/Library/Frameworks/OpenWebRTC.framework`) by dragging it in to your project.
+* Under Build Settings - Header Search Paths, add `/Library/Frameworks/OpenWebRTC.framework` (recursive)
 
 ### Linux Debian packages
 
