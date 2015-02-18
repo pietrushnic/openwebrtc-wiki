@@ -1,4 +1,4 @@
-# Testing Cerbero
+# Cerbero: Test the build and test the binaries
 
 Configuration and the persons who are responsible for building, testing, and ensuring that everything works.
 
