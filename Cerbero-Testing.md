@@ -1,6 +1,6 @@
 # Testing Cerbero
 
-Configuration and the person who is responsible for building, testing, and ensuring that everything works.
+Configuration and the persons who are responsible for building, testing, and ensuring that everything works.
 
 The more people testing the better. Multiple people for the same configuration are encouraged!
 
