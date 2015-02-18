@@ -15,6 +15,10 @@ The more people testing the better. Multiple people for the same configuration a
 * OS X Mavericks (???)
 
 ## Device Configurations
+
+* Android is broken due to [#161](https://github.com/EricssonResearch/openwebrtc/issues/161).
+* openwebrtc-examples.recipe is WIP, but not a blocker
+
 ### Linux (Cross Android-ARMv7)
 * Moto G (Nirbheek)
 * Nexus 9 (Nirbheek)
