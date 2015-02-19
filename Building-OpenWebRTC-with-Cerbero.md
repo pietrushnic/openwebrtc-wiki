@@ -77,7 +77,8 @@ Before updating your framework build:
 * Run the update build, then follow the after build steps just above
 
 ### iOS framework
-* Install the following file: `openwebrtc-devel-0.1.0-ios-universal.pkg`
+* Copy the following file to your home directory: `openwebrtc-devel-0.1.0-ios-universal.pkg`
+* Now install `openwebrtc-devel-0.1.0-ios-universal.pkg` from your home directory
 * Add the OpenWebRTC.framework to your project (found in `~/Library/Developer/OpenWebRTC/iPhone.sdk/OpenWebRTC.framework`) by dragging it in to your project.
 * Under Build Settings - Header Search Paths, add `~/Library/Developer/OpenWebRTC/iPhone.sdk/OpenWebRTC.framework/Headers` (recursive)
 
