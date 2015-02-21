@@ -25,6 +25,15 @@ All API's are defined in [webrtc.js](https://github.com/EricssonResearch/openweb
   * Don't cache the DOM elements in JavaScript
   * Be aware that certain attributes (like `angular ng-*`) will be lost from video elements. Put them on a container `<div>`.
 
+## Selecting camera
+On devices where multiple cameras are available, such as mobile devices, you can select which camera that should be used (`"user"` or `"environment"`):
+```
+var mode = "user"; // or "environment"
+var options = { "audio": true, "video": { "facingMode": mode } };
+navigator.webkitGetUserMedia(options, function (stream) {
+   ...
+});
+```
 ## Reference application
 If you get stuck we also provide a [reference WebRTC application](https://github.com/EricssonResearch/openwebrtc-examples/tree/master/web) that works in Bowser/OpenWebRTC, Chrome and Firefox.
 
