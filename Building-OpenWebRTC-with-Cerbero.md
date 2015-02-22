@@ -96,7 +96,7 @@ How to check for recipe updates as well as updates in repositories for non-fixed
     git pull --rebase
 
 ### Fetch updated source code
-    ./cerbero-uninstalled fetch
+    ./cerbero-uninstalled fetch-package --full-reset --reset-rdeps openwebrtc
 
 ### Rebuild
 
