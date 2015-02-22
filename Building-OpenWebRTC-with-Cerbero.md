@@ -118,7 +118,7 @@ For now, here are some techniques that prove handy:
    - they take much longer to build
    - the 'shell' feature isn't functional for 'universal' configurations since there's no "right" configuration to choose for the build environment -- e.g. arm64 and x86_64 have different `CFLAGS`
 
-3. On OS X and iOS, it might be quicker to use the libraries directly rather as the OpenWebRTC.framework, to avoid packaging and deploying the framework. For this, simply invoke `make install` as you go through your develop-and-debug iterations, and have your Xcode project link with all the libraries directly (by dragging them into your Xcode's project navigator).
+3. On OS X and iOS, during development iterations it might be faster to link against the libraries directly (from `dist/`) rather through the OpenWebRTC.framework — to avoid having to package and deploy it for every change. For this, simply use `make install` as you go through your develop-and-debug iterations, and have your Xcode project link with all the libraries directly from `dist/` (by dragging them into your Xcode's project navigator).
 
    (Yes, this is tedious, and we should probably make something better.)
 
