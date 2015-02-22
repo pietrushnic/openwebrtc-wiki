@@ -118,7 +118,32 @@ For now, here are some techniques that prove handy:
    - they take much longer to build
    - the 'shell' feature isn't functional for 'universal' configurations since there's no "right" configuration to choose for the build environment -- e.g. arm64 and x86_64 have different `CFLAGS`
 
-3. On OS X and iOS, during development iterations it might be faster to link against the libraries directly (from `dist/`) rather through the OpenWebRTC.framework — to avoid having to package and deploy it for every change. For this, simply use `make install` as you go through your develop-and-debug iterations, and have your Xcode project link with all the libraries directly from `dist/` (by dragging them into your Xcode's project navigator).
+3. On OS X and iOS, during development iterations it might be faster to use libraries and headers directly (from `dist/`) rather through the OpenWebRTC.framework — to avoid having to package and deploy it for every change. For this, simply
+     - use `make install` as you go through your develop-and-debug iterations,
+     - have your Xcode project link with all the libraries directly from `dist/lib/` (by dragging them into your Xcode's project navigator),
+     - add the following paths to your Header Search Paths
+
+       ````
+       $(HOME)/cerbero/dist/<arch>/include
+       $(HOME)/cerbero/dist/<arch>/include/glib-2.0
+       $(HOME)/cerbero/dist/<arch>/lib/glib-2.0/include
+       $(HOME)/cerbero/dist/<arch>/include/gstreamer-1.0
+       $(HOME)/cerbero/dist/<arch>/lib/gstreamer-1.0/include
+       `````
+
+     - add the following paths to your Library Search Paths
+
+       ````
+       $(HOME)/cerbero/dist/ios_arm64/lib
+       $(HOME)/cerbero/dist/ios_arm64/lib/gstreamer-1.0
+       ````
+
+       or on iOS:
+
+       ````
+       $(HOME)/cerbero/dist/ios_arm64/lib/static
+       $(HOME)/cerbero/dist/ios_arm64/lib/gstreamer-1.0/static
+       ````
 
    (Yes, this is tedious, and we should probably make something better.)
 
