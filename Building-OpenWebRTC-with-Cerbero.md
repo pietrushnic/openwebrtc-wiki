@@ -104,4 +104,30 @@ Run the `./cerbero-uninstalled <optional config file> package openwebrtc` comman
 
 ## Development
 
-How to edit code and rebuild it efficiently.
+This section should ultimately describe a complete (and sane) workflow for using Cerbero as a development environment.
+
+For now, here are some techniques that prove handy:
+1. Do not use cross-ios-universal and osx-universal during development, for two reasons:
+   - they take much longer to build
+   - the 'shell' feature isn't functional for 'universal' configurations since it's unclear which of the multiple platforms' CFLAGS etc. should be defined
+
+2. Use the 'shell' command to reproduce the environment needed for building OpenWebRTC or its dependencies. For example, `./cerbero-uninstalled -c config/cross-ios-arm64.cbc shell` would launch a child shell process with the environment variables needed for iOS arm64 cross-compilation.
+
+3. On OS X and iOS, it might be quicker to use the libraries directly rather as the OpenWebRTC.framework, to avoid packaging and deploying the framework. For this, simply invoke 'make install' as you go through your develop-debug iterations, and have your Xcode project link with all the libraries directly (by dragging them into your Xcode's project navigator).
+
+4. A common pitfall on iOS is its lack of support for dynamic libraries. Unfortunately, when Xcode sees both foo.a and foo.dylib in the same directory, it prefers dynamic linkage even for iOS projects. A workaround is to create a subdirectory with symlinks, i.e.:
+````bash
+cd dist/ios_arm64/lib/
+mkdir static
+cd static
+ln -s ../*.a .
+````
+After this, simply drag the .a files from static/ into the Xcode project navigator. (The GStreamer static plugins already reside in lib/gstreamer-1.0/static.)
+
+5. If you're working on a feature in OpenWebRTC, when you're done, push it into your GitHub fork and submit a pull request.
+
+6. If you're working on dependencies (e.g. GStreamer), use `git format-patch HEAD~1` to create a patch ready for "email submission". Then you can:
+   - submit the patch to GNOME Bugzilla etc.
+   - temporarily add the patch to the package's recipe (see `recipes/` folder)
+
+7. If you're changing OpenWebRTC's Cerbero recipes, fork https://github.com/nirbheek/cerbero and submit a pull request against it.
