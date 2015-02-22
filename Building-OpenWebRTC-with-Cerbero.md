@@ -120,8 +120,6 @@ For now, here are some techniques that prove handy:
 
 3. On OS X and iOS, it might be quicker to use the libraries directly rather as the OpenWebRTC.framework, to avoid packaging and deploying the framework. For this, simply invoke `make install` as you go through your develop-and-debug iterations, and have your Xcode project link with all the libraries directly (by dragging them into your Xcode's project navigator).
 
-   ![](http://i.imgur.com/L6pytmf.png)
-
    (Yes, this is tedious, and we should probably make something better.)
 
 4. A common pitfall on iOS is its lack of support for dynamic libraries. Unfortunately, when Xcode sees both foo.a and foo.dylib in the same directory, it prefers dynamic linkage even for iOS projects. A workaround is to create a subdirectory with symlinks, i.e.:
