@@ -107,22 +107,33 @@ Run the `./cerbero-uninstalled <optional config file> package openwebrtc` comman
 This section should ultimately describe a complete (and sane) workflow for using Cerbero as a development environment.
 
 For now, here are some techniques that prove handy:
-1. Do not use cross-ios-universal and osx-universal during development, for two reasons:
+
+2. Use the 'shell' command to reproduce the environment needed for building OpenWebRTC or its dependencies. For example:
+
+   `./cerbero-uninstalled -c config/cross-ios-arm64.cbc shell`
+
+   would launch a child shell process with the environment variables (such as `CFLAGS`, `OBJCFLAGS`, `LDFLAGS`) needed for iOS arm64 cross-compilation.
+
+1. Do not use cross-ios-universal and osx-universal configurations during development, for two reasons:
    - they take much longer to build
-   - the 'shell' feature isn't functional for 'universal' configurations since it's unclear which of the multiple platforms' CFLAGS etc. should be defined
+   - the 'shell' feature isn't functional for 'universal' configurations since there's no "right" configuration to choose for the build environment -- e.g. arm64 and x86_64 have different `CFLAGS`
 
-2. Use the 'shell' command to reproduce the environment needed for building OpenWebRTC or its dependencies. For example, `./cerbero-uninstalled -c config/cross-ios-arm64.cbc shell` would launch a child shell process with the environment variables needed for iOS arm64 cross-compilation.
+3. On OS X and iOS, it might be quicker to use the libraries directly rather as the OpenWebRTC.framework, to avoid packaging and deploying the framework. For this, simply invoke `make install` as you go through your develop-and-debug iterations, and have your Xcode project link with all the libraries directly (by dragging them into your Xcode's project navigator).
 
-3. On OS X and iOS, it might be quicker to use the libraries directly rather as the OpenWebRTC.framework, to avoid packaging and deploying the framework. For this, simply invoke 'make install' as you go through your develop-debug iterations, and have your Xcode project link with all the libraries directly (by dragging them into your Xcode's project navigator).
+   ![](http://i.imgur.com/L6pytmf.png)
+
+   (Yes, this is tedious, and we should probably make something better.)
 
 4. A common pitfall on iOS is its lack of support for dynamic libraries. Unfortunately, when Xcode sees both foo.a and foo.dylib in the same directory, it prefers dynamic linkage even for iOS projects. A workaround is to create a subdirectory with symlinks, i.e.:
-````bash
-cd dist/ios_arm64/lib/
-mkdir static
-cd static
-ln -s ../*.a .
-````
-After this, simply drag the .a files from static/ into the Xcode project navigator. (The GStreamer static plugins already reside in lib/gstreamer-1.0/static.)
+
+    ````bash
+    cd dist/ios_arm64/lib/
+    mkdir static
+    cd static
+    ln -s ../*.a .
+    ````
+    
+    After this, simply drag the .a files from static/ into the Xcode project navigator. (The GStreamer static plugins already reside in lib/gstreamer-1.0/static.)
 
 5. If you're working on a feature in OpenWebRTC, when you're done, push it into your GitHub fork and submit a pull request.
 
