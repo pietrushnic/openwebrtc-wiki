@@ -131,7 +131,7 @@ For now, here are some techniques that prove handy:
     ln -s ../*.a .
     ````
     
-    After this, simply drag the .a files from static/ into the Xcode project navigator. (The GStreamer static plugins already reside in lib/gstreamer-1.0/static.)
+    After this, simply drag the .a files from `dist/<platform>/lib/static/` into the Xcode project navigator. (The GStreamer static plugins already reside in `dist/<platform>/lib/gstreamer-1.0/static`.)
 
 5. If you're working on a feature in OpenWebRTC, when you're done, push it into your GitHub fork and submit a pull request.
 
