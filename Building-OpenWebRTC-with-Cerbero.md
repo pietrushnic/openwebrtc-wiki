@@ -131,18 +131,18 @@ For now, here are some techniques that prove handy:
        $(HOME)/cerbero/dist/<arch>/lib/gstreamer-1.0/include
        `````
 
-     - add the following paths to your Library Search Paths
+     - add the following paths to your Library Search Paths for non-iOS:
 
        ````
-       $(HOME)/cerbero/dist/ios_arm64/lib
-       $(HOME)/cerbero/dist/ios_arm64/lib/gstreamer-1.0
+       $(HOME)/cerbero/dist/<arch>/lib
+       $(HOME)/cerbero/dist/<arch>/lib/gstreamer-1.0
        ````
 
-       or on iOS:
+       or for iOS:
 
        ````
-       $(HOME)/cerbero/dist/ios_arm64/lib/static
-       $(HOME)/cerbero/dist/ios_arm64/lib/gstreamer-1.0/static
+       $(HOME)/cerbero/dist/ios_<arch>/lib/static
+       $(HOME)/cerbero/dist/ios_<arch>/lib/gstreamer-1.0/static
        ````
 
    (Yes, this is tedious, and we should probably make something better.)
