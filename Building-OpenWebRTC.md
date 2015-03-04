@@ -52,6 +52,12 @@ cd -
 ```
 If you are using a Linux computer instead of a Mac exchange the `osx` argument above to `linux`. Note: we currently only run and test on **Ubuntu 14.04 LTS** but it may work on other distributions.
 
+On Mac if you run into the error "error: XML::Parser perl module is required for intltool" you can fix by running:
+
+```
+sudo port install -f p5-xml-parser
+```
+
 # 3. Build the dependencies
 The dependencies used by OpenWebRTC framework are built separately. The amount of time may vary across targets. It takes about 50-60 minutes on a dual core i5 2.4GHz running OS X 10.9 when building just for the `osx` target. If building for multiple platforms as in the example below, it will take much longer. The `android` and `linux` targets build some different packages to the others that take quite a bit longer to build.
 
