@@ -11,7 +11,7 @@ The more people testing the better. Multiple people for the same configuration a
 * Ubuntu (???)
 
 ### OS X (x86_64)
-* OS X Yosemite (Nirbheek, ???)
+* OS X Yosemite (???)
 * OS X Mavericks (???)
 
 ## Device Configurations
