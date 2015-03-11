@@ -44,8 +44,6 @@ And so on. Note that as the name suggests, bootstrap only needs to be run once t
 
 ### Run a full build
 
-**NOTE:** You **MUST** build for your host first before cross-compiling for Android/iOS. This is because some of the build results are re-used for cross-compiling.
-
 #### Linux host build
     ./cerbero-uninstalled package openwebrtc
 
@@ -53,9 +51,15 @@ And so on. Note that as the name suggests, bootstrap only needs to be run once t
     ./cerbero-uninstalled -c config/osx-x86-64.cbc package openwebrtc
 
 #### iOS universal (armv7, armv7s, arm64, x86) build
+
+**NOTE:** You **MUST** build for your host first before cross-compiling for Android/iOS. This is because some of the build results are re-used for cross-compiling.
+
     ./cerbero-uninstalled -c config/cross-ios-universal.cbc package openwebrtc
 
 #### Android build
+
+**NOTE:** You **MUST** build for your host first before cross-compiling for Android/iOS. This is because some of the build results are re-used for cross-compiling.
+
     ./cerbero-uninstalled -c config/cross-android-armv7.cbc package openwebrtc
 
 ## Using the results
