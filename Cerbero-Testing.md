@@ -11,7 +11,7 @@ The more people testing the better. Multiple people for the same configuration a
 * Ubuntu (???)
 
 ### OS X (x86_64)
-* OS X Yosemite (???)
+* OS X Yosemite (Rugvip)
 * OS X Mavericks (???)
 
 ## Device Configurations
@@ -27,8 +27,12 @@ The more people testing the better. Multiple people for the same configuration a
 ### OS X (Cross Android-ARMv7)
 * Moto G
 * Nexus 9
+* Nexus 7 (Rugvip)
 * Nexus 4
+* Sony Z1 (Rugvip)
+* Sony Z2 (Rugvip)
 
 ### OS X (Cross iOS-Universal)
+* iPad Air (Rugvip)
 * iPhone 5C (?)
 * ...
