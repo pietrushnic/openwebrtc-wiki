@@ -2,6 +2,8 @@
 
 Configuration and the persons who are responsible for building, testing, and ensuring that everything works.
 
+*Testing means testing all test and example applications for that platform to check that they work or at least do not regress from the build scripts.*
+
 The more people testing the better. Multiple people for the same configuration are encouraged!
 
 ## Native Configurations
@@ -34,5 +36,8 @@ The more people testing the better. Multiple people for the same configuration a
 
 ### OS X (Cross iOS-Universal)
 * iPad Air (Rugvip)
+* iPad 2 (?)
+* iPhone 6 Plus (?)
+* iPhone 5 (?)
 * iPhone 5C (?)
 * ...
