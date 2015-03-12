@@ -2,7 +2,7 @@
 
 Configuration and the persons who are responsible for building, testing, and ensuring that everything works.
 
-*Testing means testing all test and example applications for that platform to check that they work or at least do not regress from the build scripts.*
+**Testing means testing all test and example applications for that platform to check that they work or at least do not regress from the build scripts.**
 
 The more people testing the better. Multiple people for the same configuration are encouraged!
 
