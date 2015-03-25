@@ -10,7 +10,7 @@ A build system written for GStreamer. We have made a few changes to existing rec
 Make sure you checkout the repo in your **home directory** to avoid issues down the road.
 
     cd
-    git clone https://github.com/nirbheek/cerbero.git
+    git clone https://github.com/EricssonResearch/cerbero.git
 
 ### Platform specific bits
 
@@ -168,4 +168,4 @@ For now, here are some techniques that prove handy:
    - submit the patch to GNOME Bugzilla etc.
    - temporarily add the patch to the package's recipe (see `recipes/` folder)
 
-7. If you're changing OpenWebRTC's Cerbero recipes, fork https://github.com/nirbheek/cerbero and submit a pull request against it.
+7. If you're changing OpenWebRTC's Cerbero recipes, fork https://github.com/EricssonResearch/cerbero and submit a pull request against it.
