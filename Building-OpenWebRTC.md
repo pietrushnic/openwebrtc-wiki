@@ -36,6 +36,8 @@ If you wish to build for iOS (requires OS X to be the host), also run:
 
     ./cerbero-uninstalled -c config/cross-ios-universal.cbc bootstrap
 
+(there is a dependency on the system Emacs, so if you get an error about Emacs not being able to load, check that you haven't installed a recent version.  If so, set /usr/bin to be first in the path before the directory containing the version you installed)
+
 If you wish to build for Android (works with all hosts), also run:
 
     ./cerbero-uninstalled -c config/cross-android-armv7.cbc bootstrap
