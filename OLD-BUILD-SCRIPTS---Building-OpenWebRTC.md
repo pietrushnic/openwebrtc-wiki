@@ -1,3 +1,13 @@
+
+**THIS BUILD METHOD IS DEPRECATED**
+PLEASE USE https://github.com/EricssonResearch/openwebrtc/wiki/Building-OpenWebRTC
+
+
+***
+
+
+
+
 # Platform-specific dependencies
 
 ## Host (Build) Platforms
