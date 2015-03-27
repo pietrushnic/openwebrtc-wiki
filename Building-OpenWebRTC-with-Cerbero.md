@@ -162,6 +162,8 @@ For now, here are some techniques that prove handy:
     
     After this, simply drag the .a files from `dist/<platform>/lib/static/` into the Xcode project navigator. (The GStreamer static plugins already reside in `dist/<platform>/lib/gstreamer-1.0/static`.)
 
+   **NOTE**: Simply dragging in all .a files above will link your application against both OpenSSL and gnutls, which will break things. Make sure to remove all libgnutls*.a files from your XCode project after dragging them in (or just don't drag them in at all) to avoid problems!
+
    **NOTE**: Make sure to recreate all symbolic links after rebuilding OpenWebRTC! If you forget to do this, you may run into many obscure run-time issues.
 
 5. If you're working on a feature in OpenWebRTC, when you're done, push it into your GitHub fork and submit a pull request.
