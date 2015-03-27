@@ -151,8 +151,6 @@ For now, here are some techniques that prove handy:
 
    (Yes, this is tedious, and we should probably make something better.)
 
-   **NOTE**: Make sure to recreate all symbolic links after rebuilding OpenWebRTC! If you forget to do this, you may run into many obscure run-time issues.
-
 4. A common pitfall on iOS is its lack of support for dynamic libraries. Unfortunately, when Xcode sees both foo.a and foo.dylib in the same directory, it prefers dynamic linkage even for iOS projects. A workaround is to create a subdirectory with symlinks, i.e.:
 
     ````bash
@@ -163,6 +161,8 @@ For now, here are some techniques that prove handy:
     ````
     
     After this, simply drag the .a files from `dist/<platform>/lib/static/` into the Xcode project navigator. (The GStreamer static plugins already reside in `dist/<platform>/lib/gstreamer-1.0/static`.)
+
+   **NOTE**: Make sure to recreate all symbolic links after rebuilding OpenWebRTC! If you forget to do this, you may run into many obscure run-time issues.
 
 5. If you're working on a feature in OpenWebRTC, when you're done, push it into your GitHub fork and submit a pull request.
 
