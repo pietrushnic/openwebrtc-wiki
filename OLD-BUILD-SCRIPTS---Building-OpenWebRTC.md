@@ -1,6 +1,6 @@
 
-**THIS BUILD METHOD IS DEPRECATED**
-PLEASE USE https://github.com/EricssonResearch/openwebrtc/wiki/Building-OpenWebRTC
+# THIS BUILD METHOD IS DEPRECATED
+**PLEASE USE** https://github.com/EricssonResearch/openwebrtc/wiki/Building-OpenWebRTC
 
 
 ***
