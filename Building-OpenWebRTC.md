@@ -47,22 +47,22 @@ And so on. Note that as the name suggests, bootstrap only needs to be run once t
 ### Run a full build
 
 #### Linux host build
-    ./cerbero-uninstalled package openwebrtc
+    ./cerbero-uninstalled package -f openwebrtc
 
 #### Mac OS X host build
-    ./cerbero-uninstalled -c config/osx-x86-64.cbc package openwebrtc
+    ./cerbero-uninstalled -c config/osx-x86-64.cbc package -f openwebrtc
 
 #### iOS universal (armv7, armv7s, arm64, x86) build
 
 **NOTE:** You **MUST** build for your host first before cross-compiling for Android/iOS. This is because some of the build results are re-used for cross-compiling.
 
-    ./cerbero-uninstalled -c config/cross-ios-universal.cbc package openwebrtc
+    ./cerbero-uninstalled -c config/cross-ios-universal.cbc package -f openwebrtc
 
 #### Android build
 
 **NOTE:** You **MUST** build for your host first before cross-compiling for Android/iOS. This is because some of the build results are re-used for cross-compiling.
 
-    ./cerbero-uninstalled -c config/cross-android-armv7.cbc package openwebrtc
+    ./cerbero-uninstalled -c config/cross-android-armv7.cbc package -f openwebrtc
 
 ## Using the results
 
@@ -106,7 +106,7 @@ How to check for recipe updates as well as updates in repositories for non-fixed
 
 ### Rebuild
 
-Run the `./cerbero-uninstalled <optional config file> package openwebrtc` command from above.
+Run the `./cerbero-uninstalled <optional config file> package -f openwebrtc` command from above.
 
 ## Development
 
