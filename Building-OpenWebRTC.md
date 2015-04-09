@@ -30,16 +30,17 @@ In `~/cerbero`:
 Bootstrapping is required for building anything with a particular config (-c argument). For example, to build using the default config:
 
     cd cerbero
+
+#### Linux host bootstrap
     ./cerbero-uninstalled bootstrap
 
-If you wish to build for iOS (requires OS X to be the host), also run:
+#### Mac OS X host bootstrap
+    ./cerbero-uninstalled -c config/osx-x86-64.cbc bootstrap
 
+#### iOS cross-compile bootstrap
     ./cerbero-uninstalled -c config/cross-ios-universal.cbc bootstrap
 
-(there is a dependency on the system Emacs, so if you get an error about Emacs not being able to load, check that you haven't installed a recent version.  If so, set /usr/bin to be first in the path before the directory containing the version you installed)
-
-If you wish to build for Android (works with all hosts), also run:
-
+#### Android cross-compile bootstrap
     ./cerbero-uninstalled -c config/cross-android-armv7.cbc bootstrap
 
 And so on. Note that as the name suggests, bootstrap only needs to be run once to prepare the build environment.
@@ -107,6 +108,10 @@ How to check for recipe updates as well as updates in repositories for non-fixed
 ### Rebuild
 
 Run the `./cerbero-uninstalled <optional config file> package -f openwebrtc` command from above.
+
+
+***
+
 
 ## Development
 
