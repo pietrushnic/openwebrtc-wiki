@@ -109,6 +109,16 @@ How to check for recipe updates as well as updates in repositories for non-fixed
 
 Run the `./cerbero-uninstalled <optional config file> package -f openwebrtc` command from above.
 
+## Troubleshooting
+
+* Cross-compiling for Android/iOS, openwebrtc package fails at configure stage stating 'Exception: You need to build openwebrtc for the host darwin before you can cross-compile it for android' or iOS
+** A commit may have landed between building OpenWebRTC for the host and target systems. Try rebuilding the openwebrtc package for the host and target:
+```
+./cerbero-uninstalled -c config/osx-x86-64.cbc buildone openwebrtc \
+&& ./cerbero-uninstalled -c config/cross-ios-universal.cbc buildone openwebrtc \
+&& ./cerbero-uninstalled -c config/cross-ios-universal.cbc package openwebrtc
+```
+
 
 ***
 
