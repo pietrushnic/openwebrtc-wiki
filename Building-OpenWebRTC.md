@@ -91,7 +91,9 @@ Before updating your framework build:
 
 ### Linux Debian packages
 
-### Android jar?
+### Android
+
+See [OpenWebRTC-Examples/Developing-Android-apps](https://github.com/EricssonResearch/openwebrtc-examples/wiki/Developing-Android-apps)
 
 ## Updating
 
