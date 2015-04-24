@@ -22,8 +22,8 @@ Make sure you checkout the repo in your **home directory** to avoid issues down 
 In `~/cerbero`:
 
     mkdir -p dist
-    mkdir -p /Library/Frameworks/OpenWebRTC.framework/Versions/0.1
-    ln -s /Library/Frameworks/OpenWebRTC.framework/Versions/0.1 dist/darwin_x86_64
+    mkdir -p /Library/Frameworks/OpenWebRTC.framework/Versions/0.3
+    ln -s /Library/Frameworks/OpenWebRTC.framework/Versions/0.3 dist/darwin_x86_64
 
 ### Bootstrap
 
@@ -74,8 +74,8 @@ On OS X, the prefix points to /Library/Frameworks/OpenWebRTC.framework/Versions/
 After building, to use the framework:
 * `mv /Library/Frameworks/OpenWebRTC.framework /Library/Frameworks/OpenWebRTC.framework.build`
 * Install the package files from `~/cerbero`
-  * `openwebrtc-0.1.0-x86_64.pkg`
-  * `openwebrtc-devel-0.1.0-x86_64.pkg`
+  * `openwebrtc-0.3.0-x86_64.pkg`
+  * `openwebrtc-devel-0.3.0-x86_64.pkg`
 * Add the OpenWebRTC.framework to your project
 
 Before updating your framework build:
@@ -84,7 +84,7 @@ Before updating your framework build:
 * Run the update build, then follow the after build steps just above
 
 ### iOS framework
-* Install the following file `openwebrtc-devel-0.1.0-ios-universal.pkg`
+* Install the following file `openwebrtc-devel-0.3.0-ios-universal.pkg`
   * You need to change the installation destination and select "Install for me only"
 * Add the OpenWebRTC.framework to your project (found in `~/Library/Developer/OpenWebRTC/iPhone.sdk/OpenWebRTC.framework`) by dragging it in to your project.
 * Under Build Settings - Header Search Paths, add `~/Library/Developer/OpenWebRTC/iPhone.sdk/OpenWebRTC.framework/Headers` (recursive)
