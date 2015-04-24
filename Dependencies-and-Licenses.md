@@ -1,4 +1,4 @@
-There are many projects required by OpenWebRTC to provide different parts of the functionality needed for WebRTC. This page is meant to help summaries the dependencies that are used by the project as well as their software licenses. For specific licenses, you need to find each project's license text.
+There are many projects required by OpenWebRTC to provide different parts of the functionality needed for WebRTC. This page is meant to help summaries the dependencies that are used by the project as well as their software licenses. For specific licenses, you need to find each project's license text - [see here for an outdated list](http://www.openwebrtc.io/third-party-licenses).
 
 **This page is not intended to be an introduction to how to work with Open Source software, rather a helping hand once you know that.**
 
