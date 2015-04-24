@@ -106,13 +106,13 @@ How to check for recipe updates as well as updates in repositories for non-fixed
 
 ### Fetch updated source code
 
-* Mac OS X
+#### Mac OS X
     ./cerbero-uninstalled -c config/osx-x86-64.cbc fetch-package --full-reset --reset-rdeps openwebrtc
-* iOS
+#### iOS
     ./cerbero-uninstalled -c config/cross-ios-universal.cbc fetch-package --full-reset --reset-rdeps openwebrtc
-* Android
+#### Android
     ./cerbero-uninstalled -c config/cross-android-armv7.cbc fetch-package --full-reset --reset-rdeps openwebrtc
-* Linux
+#### Linux
     ./cerbero-uninstalled fetch-package --full-reset --reset-rdeps openwebrtc
 
 ### Rebuild
