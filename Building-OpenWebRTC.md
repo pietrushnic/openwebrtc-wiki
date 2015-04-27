@@ -23,7 +23,7 @@ In `~/cerbero`:
 
     mkdir -p dist
     mkdir -p /Library/Frameworks/OpenWebRTC.framework/Versions/0.3
-    ln -s /Library/Frameworks/OpenWebRTC.framework/Versions/0.3 dist/darwin_x86_64
+    ln -sf /Library/Frameworks/OpenWebRTC.framework/Versions/0.3 dist/darwin_x86_64
 
 ### Bootstrap
 
