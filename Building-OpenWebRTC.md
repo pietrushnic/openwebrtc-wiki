@@ -32,7 +32,7 @@ Bootstrapping is required for building anything with a particular config (-c arg
     cd cerbero
 
 #### Linux host bootstrap
-    ./cerbero-uninstalled bootstrap
+    ./cerbero-uninstalled -c config/linux.cbc bootstrap
 
 #### Mac OS X host bootstrap
     ./cerbero-uninstalled -c config/osx-x86-64.cbc bootstrap
@@ -48,7 +48,7 @@ And so on. Note that as the name suggests, bootstrap only needs to be run once t
 ### Run a full build
 
 #### Linux host build
-    ./cerbero-uninstalled package -f openwebrtc
+    ./cerbero-uninstalled -c config/linux.cbc package -f openwebrtc
 
 #### Mac OS X host build
     ./cerbero-uninstalled -c config/osx-x86-64.cbc package -f openwebrtc
@@ -91,6 +91,8 @@ Before updating your framework build:
 
 ### Linux Debian packages
 
+Install all the Debian packages. If you used the `-c config/linux.cbc` during building then the install prefix will be `/opt/openwebrtc-0.3`. You can create an environment which uses those libraries and binaries by exporting `PATH`, `LD_LIBRARY_PATH`, `PKG_CONFIG_PATH`, `GST_PLUGIN_PATH_1_0` and so on. Such an environment should also allow you to build against the libraries.
+
 ### Android
 
 See [OpenWebRTC-Examples/Developing-Android-apps](https://github.com/EricssonResearch/openwebrtc-examples/wiki/Developing-Android-apps)
@@ -113,7 +115,7 @@ How to check for recipe updates as well as updates in repositories for non-fixed
 #### Android
     ./cerbero-uninstalled -c config/cross-android-armv7.cbc fetch-package --full-reset --reset-rdeps openwebrtc
 #### Linux
-    ./cerbero-uninstalled fetch-package --full-reset --reset-rdeps openwebrtc
+    ./cerbero-uninstalled -c config/linux.cbc fetch-package --full-reset --reset-rdeps openwebrtc
 
 ### Rebuild
 
