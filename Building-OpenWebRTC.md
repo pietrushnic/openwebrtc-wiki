@@ -16,14 +16,19 @@ Make sure you checkout the repo in your **home directory** to avoid issues down 
 
 #### Mac OS X host
 
-    sudo mkdir /Library/Frameworks/OpenWebRTC.framework
-    sudo chown $UID /Library/Frameworks/OpenWebRTC.framework/
+    sudo mkdir -p /Library/Frameworks/OpenWebRTC.framework
+    sudo chown -R $UID /Library/Frameworks/OpenWebRTC.framework/
 
 In `~/cerbero`:
 
     mkdir -p dist
     mkdir -p /Library/Frameworks/OpenWebRTC.framework/Versions/0.3
     ln -sf /Library/Frameworks/OpenWebRTC.framework/Versions/0.3 dist/darwin_x86_64
+
+#### Linux host
+
+    sudo mkdir -p /opt/openwebrtc-0.3
+    sudo chown -R $UID /opt/openwebrtc-0.3
 
 ### Bootstrap
 
