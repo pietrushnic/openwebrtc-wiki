@@ -1,5 +1,9 @@
 # Building OpenWebRTC with Cerbero
 
+## Are you sure you want to be doing this?
+
+There are [downloadable binary releases](https://github.com/EricssonResearch/openwebrtc/releases) available so that you don't have to!
+
 ## What is cerbero?
 
 A build system written for GStreamer. We have made a few changes to existing recipes and added some more that we need for OpenWebRTC.
