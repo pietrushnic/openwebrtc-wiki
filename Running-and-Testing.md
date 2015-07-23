@@ -33,9 +33,11 @@ OpenWebRTC browser extensions communicate with the daemon via its local web serv
 
 ![Daemon screenshot](https://github.com/EricssonResearch/openwebrtc-browser-extensions/blob/master/imgs/daemon.png)
 
-Start the daemon by running the following command from the root directory of your openwebrtc clone:
+Start the daemon by running the following commands:
 ```
-./out/x86_64-apple-darwin/bin/openwebrtc-daemon
+cd ~/cerbero
+./cerbero-uninstalled -c <CONFIG FILE> shell
+openwebrtc-daemon
 ```
 
 Note that you need to [[build|Building-OpenWebRTC]] OpenWebRTC first. In this example we run it on OS X, but the daemon is also available on Linux.
