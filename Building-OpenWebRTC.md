@@ -8,17 +8,17 @@ There are [downloadable binary releases](https://github.com/EricssonResearch/ope
 
 A build system written for GStreamer. We have made a few changes to existing recipes and added some more that we need for OpenWebRTC.
 
-## Do it!
-
-### Clone cerbero code and recipes
+## Get the Build System and Code
 Make sure you checkout the repo in your **home directory** to avoid issues down the road.
 
     cd
     git clone https://github.com/EricssonResearch/cerbero.git
 
-### Platform specific bits
+Note: To update you can then run `git checkout master && git pull --rebase`
 
-#### Mac OS X host
+## Prepare the host
+
+### Mac OS X host
 
     sudo mkdir -p /Library/Frameworks/OpenWebRTC.framework
     sudo chown -R $UID /Library/Frameworks/OpenWebRTC.framework/
@@ -29,50 +29,49 @@ In `~/cerbero`:
     mkdir -p /Library/Frameworks/OpenWebRTC.framework/Versions/0.3
     ln -sf /Library/Frameworks/OpenWebRTC.framework/Versions/0.3 dist/darwin_x86_64
 
-#### Linux host
+### Linux host
 
     sudo mkdir -p /opt/openwebrtc-0.3
     sudo chown -R $UID /opt/openwebrtc-0.3
 
-### Bootstrap
 
-Bootstrapping is required for building anything with a particular config (-c argument). For example, to build using the default config:
+## Build
 
-    cd cerbero
+First we fetch, then we bootstrap, then we package. The process is the same when building fresh as when updating.
 
-#### Linux host bootstrap
-    ./cerbero-uninstalled -c config/linux.cbc bootstrap
+Bootstrapping is required for building anything with a particular config (-c argument). That is you need to run the bootstrap for each target.
 
-#### Mac OS X host bootstrap
-    ./cerbero-uninstalled -c config/osx-x86-64.cbc bootstrap
+#### Mac OS X host target
 
-#### iOS cross-compile bootstrap
-    ./cerbero-uninstalled -c config/cross-ios-universal.cbc bootstrap
+    cd ~/cerbero \
+    && ./cerbero-uninstalled -c config/osx-x86-64.cbc fetch-package --full-reset --reset-rdeps openwebrtc \
+    && ./cerbero-uninstalled -c config/osx-x86-64.cbc bootstrap \
+    && ./cerbero-uninstalled -c config/osx-x86-64.cbc package -f openwebrtc
 
-#### Android cross-compile bootstrap
-    ./cerbero-uninstalled -c config/cross-android-armv7.cbc bootstrap
+#### iOS Universal cross-compile (armv7, armv7s, arm64, x86) target
 
-And so on. Note that as the name suggests, bootstrap only needs to be run once to prepare the build environment.
+**NOTE:** You **MUST** build for your host first before cross-compiling for iOS. This is because some of the build results are re-used for cross-compiling.
 
-### Run a full build
+    cd ~/cerbero \
+    && ./cerbero-uninstalled -c config/cross-ios-universal.cbc fetch-package --full-reset --reset-rdeps openwebrtc \
+    && ./cerbero-uninstalled -c config/cross-ios-universal.cbc bootstrap \
+    && ./cerbero-uninstalled -c config/cross-ios-universal.cbc package -f openwebrtc
 
-#### Linux host build
-    ./cerbero-uninstalled -c config/linux.cbc package -f openwebrtc
+#### Android cross-compile target
 
-#### Mac OS X host build
-    ./cerbero-uninstalled -c config/osx-x86-64.cbc package -f openwebrtc
+**NOTE:** You **MUST** build for your host first before cross-compiling for Android. This is because some of the build results are re-used for cross-compiling.
 
-#### iOS universal (armv7, armv7s, arm64, x86) build
+    cd ~/cerbero \
+    && ./cerbero-uninstalled -c config/cross-android-armv7.cbc fetch-package --full-reset --reset-rdeps openwebrtc \
+    && ./cerbero-uninstalled -c config/cross-android-armv7.cbc bootstrap \
+    && ./cerbero-uninstalled -c config/cross-android-armv7.cbc package -f openwebrtc
 
-**NOTE:** You **MUST** build for your host first before cross-compiling for Android/iOS. This is because some of the build results are re-used for cross-compiling.
+### Linux target
 
-    ./cerbero-uninstalled -c config/cross-ios-universal.cbc package -f openwebrtc
-
-#### Android build
-
-**NOTE:** You **MUST** build for your host first before cross-compiling for Android/iOS. This is because some of the build results are re-used for cross-compiling.
-
-    ./cerbero-uninstalled -c config/cross-android-armv7.cbc package -f openwebrtc
+    cd ~/cerbero \
+    && ./cerbero-uninstalled -c config/linux.cbc fetch-package --full-reset --reset-rdeps openwebrtc \
+    && ./cerbero-uninstalled -c config/linux.cbc bootstrap \
+    && ./cerbero-uninstalled -c config/linux.cbc package -f openwebrtc
 
 ## Using the results
 
@@ -113,22 +112,10 @@ How to check for recipe updates as well as updates in repositories for non-fixed
 ### Update cerbero and the recipes
 
     cd ~/cerbero
+    git checkout master
     git pull --rebase
 
-### Fetch updated source code
-
-#### Mac OS X
-    ./cerbero-uninstalled -c config/osx-x86-64.cbc fetch-package --full-reset --reset-rdeps openwebrtc
-#### iOS
-    ./cerbero-uninstalled -c config/cross-ios-universal.cbc fetch-package --full-reset --reset-rdeps openwebrtc
-#### Android
-    ./cerbero-uninstalled -c config/cross-android-armv7.cbc fetch-package --full-reset --reset-rdeps openwebrtc
-#### Linux
-    ./cerbero-uninstalled -c config/linux.cbc fetch-package --full-reset --reset-rdeps openwebrtc
-
-### Rebuild
-
-Run the `./cerbero-uninstalled <optional config file> package -f openwebrtc` command from above.
+Then follow the standard build instructions above.
 
 ## Troubleshooting
 
