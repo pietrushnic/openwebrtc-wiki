@@ -4,7 +4,7 @@ We are working hard on interoperability. We believe interoperability is one of t
 
 # Simple Camera Test
 
-One of the first things to test is whether you can get a video stream from your camera. You can do this with a simple [getUserMedia test app](http://googlechrome.github.io/webrtc/samples/web/content/getusermedia/gum/).
+One of the first things to test is whether you can get a video stream from your camera. You can do this with a simple [getUserMedia test app](https://webrtc.github.io/samples/src/content/getusermedia/gum/).
 
 # Point-to-point Audio/Video Test
 
